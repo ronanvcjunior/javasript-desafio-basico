@@ -1,0 +1,51 @@
+body {
+    background-image: url(../imagens/capa.jpg);
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+.caixa {
+    background: rgba(44, 44, 44, 0.8);
+    color: aliceblue;
+    padding: 0 0.5rem 0.5rem;
+}
+
+.caixa h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 5.5rem;
+}
+
+.caixa li {
+    padding: 0.5rem 0;
+}
+
+.caixa li+li {
+    border-top: 1px solid white;
+}
+
+.caixa a {
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+.caixa a:hover {
+    color: #e6e6e6;
+}
+
+@media (min-width: 1200px) {
+    .caixa {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        border-radius: 2rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .caixa {
+        padding: 0 2rem 0.5rem;
+    }
+}

@@ -17,14 +17,6 @@ body {
     line-height: 5.5rem;
 }
 
-.caixa li {
-    padding: 0.5rem 0;
-}
-
-.caixa li+li {
-    border-top: 1px solid white;
-}
-
 .caixa a {
     color: #ffffff;
     font-size: 1.25rem;

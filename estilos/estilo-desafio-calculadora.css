@@ -1,0 +1,131 @@
+body {
+    background-color: #2a2a2e;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+.caixa {
+    background: rgba(0, 0, 0, 0.1);
+    color: aliceblue;
+    padding: 0 0.5rem 0.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.caixa h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 5.5rem;
+}
+
+#calculadora {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: grid;
+    gap: 0.5rem;
+
+    grid: 
+        "camp       camp    camp            camp"      50px
+        "sete       oito    nove            soma"       50px
+        "quatro     cinco   seis            subtracao"  50px
+        "um         dois    tres            ponto"      50px
+        "zero       divisao multiplicacao   igual"      50px
+        /2fr        2fr     2fr             1fr
+}
+
+
+#camp #campo {
+    padding-left: 0.5rem;
+    margin: 0;
+    height: 100%;
+    width: calc(100% - 58px);
+}
+
+#camp #reset {
+    margin: 0;
+    height: 100%;
+    width: 50px;
+}
+
+@media (min-width: 1200px) {
+    .caixa {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        border-radius: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .caixa {
+        padding: 0 2rem 0.5rem;
+    }
+}
+
+#camp {
+    grid-area: camp;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#um {
+    grid-area: um;
+}
+
+#dois {
+    grid-area: dois;
+}
+
+#tres {
+    grid-area: tres;
+}
+
+#quatro {
+    grid-area: quatro;
+}
+
+#cinco {
+    grid-area: cinco;
+}
+
+#seis {
+    grid-area: seis;
+}
+
+#sete {
+    grid-area: sete;
+}
+
+#oito {
+    grid-area: oito;
+}
+
+#nove {
+    grid-area: nove;
+}
+
+#soma {
+    grid-area: soma;
+}
+
+#subtracao {
+    grid-area: subtracao;
+}
+
+#multiplicacao {
+    grid-area: multiplicacao;
+}
+
+#divisao {
+    grid-area: divisao;
+}
+
+#ponto {
+    grid-area: ponto;
+}
+
+#igual {
+    grid-area: igual;
+}

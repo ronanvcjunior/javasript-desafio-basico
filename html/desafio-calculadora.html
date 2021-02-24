@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Desafio calculadora básica</title>
+    <link rel="icon" href="../imagens/js.png">
+
+    <link rel="stylesheet" href="../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="../estilos/estilo-desafio-calculadora.css">
+</head>
+<body>
+    <div class="caixa container-fluid container-xl">
+        <h1>Desafio calculadora básica</h1>
+
+        <div class="container-fluid" id="calculadora">
+            <div id="camp">
+                <input type="text" id="campo" disabled>
+                <button type="reset" id="reset" onclick="reset()"> X</button>
+            </div>
+
+            <button type="submit" id="sete" onclick="calcular(7)">7</button>
+            <button type="submit" id="oito" onclick="calcular(8)">8</button>
+            <button type="submit" id="nove" onclick="calcular(9)">9</button>
+            <button type="submit" id="quatro" onclick="calcular(4)">4</button>
+            <button type="submit" id="cinco" onclick="calcular(5)">5</button>
+            <button type="submit" id="seis" onclick="calcular(6)">6</button>
+            <button type="submit" id="um" onclick="calcular(1)">1</button>
+            <button type="submit" id="dois" onclick="calcular(2)">2</button>
+            <button type="submit" id="tres" onclick="calcular(3)">3</button>
+            <button type="submit" id="zero" onclick="calcular(0)">0</button>
+            <button type="submit" id="ponto" onclick="calcular('.')">.</button>
+            <button type="submit" id="soma" onclick="calcular('soma')">+</button>
+            <button type="submit" id="subtracao" onclick="calcular('subtracao')">-</button>
+            <button type="submit" id="divisao" onclick="calcular('divisao')">/</button>
+            <button type="submit" id="multiplicacao" onclick="calcular('multiplicacao')">*</button>
+            <button type="submit" id="igual" onclick="calcular('resultado')">=</button>
+        </div>
+
+        <script src="../javascript/script-desafio-calculadora.js"></script>
+    </div>
+</body>
+</html>

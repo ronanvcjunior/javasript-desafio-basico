@@ -27,6 +27,10 @@ body {
     color: #e6e6e6;
 }
 
+input, button {
+    padding: 0.25rem;
+}
+
 @media (min-width: 1200px) {
     .caixa {
         margin-top: 4rem;

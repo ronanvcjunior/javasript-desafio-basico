@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Desafio Game: mata mosquito</title>
+    <link rel="icon" href="../../imagens/js.png">
+
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" href="../../estilos/estilo-game-mata-mosquito.css">
+    
+    <script>
+        // iniciar jogo
+        var nivel
+
+        function iniciarjogo() {
+            nivel = document.getElementById('nivel').value
+
+            if (nivel == '') {
+                alert('Selecione um nível para iniciar o jogo!')
+                return false
+            }
+
+            window.location.href = 'game-mata-mosquito.html?' + nivel
+
+        }
+    </script>
+</head>
+<body class="container-fluid" onresize="ajustaTamanhoPalcoJogo()">
+    
+    <img src="../../imagens/game.png" alt="">
+
+    <select name="" id="nivel">
+        <option value="">-- Selecione o nível --</option>
+        <option value="normal">Normal</option>
+        <option value="dificil">Difícil</option>
+        <option value="chuck">Chuck Norris</option>
+    </select>
+
+    <button type="button" id="iniciar" onclick="iniciarjogo()">Iniciar Jogo</button>
+
+    <script>
+
+    </script>
+</body>
+</html>

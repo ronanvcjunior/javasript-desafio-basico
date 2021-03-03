@@ -1,9 +1,12 @@
 var vida = 3
-
-// Definindo a dimensão do palco
+var tempo = 60
 var altura
 var largura
+var criaMosquitoTempo
+var resultado
+var nivel = window.location.search.replace('?', '')
 
+// Definindo a dimensão do palco
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight
     largura = window.innerWidth
@@ -13,29 +16,17 @@ function ajustaTamanhoPalcoJogo() {
 
 ajustaTamanhoPalcoJogo()
 
-// Criando posições randomicas
-function poicaoRandomica() {
+/* ############################################################################################## */
 
-    // remover o mosquito anterior (caso exista)
-    if (document.getElementById('mosquito')) {
-        document.getElementById('mosquito').remove()
+// Jogo
+function iniciarJogo() {
 
-        // controlando os pontos de vida
-        if (vida != 0) {
-            document.getElementById('v' + vida).src = '../../imagens/coracao_vazio.png'
-            vida --
-        } else {
-            window.location.href = 'game-mata-mosquito-loser.html'
-        }
-    }
+    removeMosquito()
 
-    var posicaoX = Math.floor(Math.random() * largura) - 90
-    var posicaoY = Math.floor(Math.random() * altura) - 90
+    var posicaoX = posicaoRandomica(largura)
+    var posicaoY =posicaoRandomica(altura)
 
-    posicaoX = posicaoX < 0 ? 0 : posicaoX
-    posicaoY = posicaoY < 0 ? 0 : posicaoY
-
-    console.log(posicaoX, posicaoY)
+    //console.log(posicaoX, posicaoY)
 
     // Criar o elemento html
     var mosquito = document.createElement('img')
@@ -55,6 +46,16 @@ function poicaoRandomica() {
     document.body.appendChild(mosquito)
 }
 
+// Criando posições randomicas
+function posicaoRandomica(tamanhoEixoTela) {
+    var posicao = Math.floor(Math.random() * tamanhoEixoTela) - 90
+
+    while (posicao <= 0) {
+        posicao = Math.floor(Math.random() * tamanhoEixoTela) - 90
+    }
+    return posicao
+}
+
 // Criando tamanhos randomicas
 function tamanhoRandomico() {
     var classe = Math.floor(Math.random() * 3)
@@ -69,15 +70,35 @@ function ladooRandomico() {
     return 'lado' + classe
 }
 
-// cronometro
-var tempo = 60
+// remover o mosquito anterior (caso exista)
+function removeMosquito() {
+    if (document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove()
 
-var cronometro = setInterval(function name(params) {
+        // controlando os pontos de vida
+        if (vida != 0) {
+            document.getElementById('v' + vida).src = '../../imagens/coracao_vazio.png'
+            vida --
+        } else {
+            resultado = 'game_over'
+            resultadoJogo(resultado)
+        }
+    }
+}
+
+// resultado do jogo
+function resultadoJogo(resultado) {
+    window.location.href = 'game-mata-mosquito-resultado.html?'+ resultado
+}
+
+// cronometro
+var cronometro = setInterval(function name() {
     if (tempo < 0) {
         clearInterval(cronometro)
         clearInterval(criaMosquito)
 
-        window.location.href = 'game-mata-mosquito-winner.html'
+        resultado = 'vitoria'
+        resultadoJogo(resultado)
     } else {
         document.getElementById('cronometro').innerHTML = tempo
         tempo -=1
@@ -85,11 +106,6 @@ var cronometro = setInterval(function name(params) {
 }, 1000);
 
 // definindo a dificuldade
-var criaMosquitoTempo
-
-var nivel = window.location.search
-nivel = nivel.replace('?', '')
-
 if (nivel === 'normal') {
     criaMosquitoTempo = 1500
 }else if (nivel === 'dificil') {
@@ -97,4 +113,9 @@ if (nivel === 'normal') {
 } else if (nivel === 'chuck') {
     criaMosquitoTempo = 750
 }
+
+// cria o mosquito
+var criaMosquito = setInterval(function() {
+    iniciarJogo()
+}, criaMosquitoTempo);
 

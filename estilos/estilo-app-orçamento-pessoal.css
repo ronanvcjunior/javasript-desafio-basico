@@ -1,0 +1,28 @@
+header {
+    background-color: #5071c7;
+    padding: 1rem 2rem;
+    height: 67px;
+}
+
+header img {
+    width: 50px;
+    height: 35px;
+}
+
+#header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+
+header menu {
+    display: block;
+    color: white;
+    font-size: 1.1rem;
+}
+
+header menu li {
+    padding-top: 1rem;
+}

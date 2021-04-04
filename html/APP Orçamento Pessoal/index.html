@@ -15,23 +15,109 @@
 </head>
 
 <body class="">
-    <header class="">
+    <header id="menuSuperior">
         <div class="container-xl">
             <div id="header">
-                <img src="../../imagens/logo.png" alt="">
+                <label>
+                    <img src="../../imagens/logo.png" alt="">
+                </label>
 
-                <i id="menu" class="fas fa-bars" style="color: white;"></i>
+                <i id="menu" class="fas fa-bars" onclick="abrirMenu()"></i>
             </div>
 
             <menu>
                 <ul>
-                    <li>Cadastro</li>
+                    <li>
+                        <a href="index.html">Cadastro</a>
+                    </li>
 
-                    <li>Consulta</li>
+                    <li>
+                        <a href="consulta.html">Consulta</a>
+                    </li>
                 </ul>
             </menu>
         </div>
     </header>
+
+    <section class="container-fluid container-xl">
+        <h1>Registro de nova despesa</h1>
+
+        <div id="registro">
+            <select name="" id="ano">
+                <option value="ano">--Ano--</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+
+            <select name="" id="mes">
+                <option value="mes">--Mês--</option>
+                <option value="janeiro">Janeiro</option>
+                <option value="fevereiro">Fevereiro</option>
+                <option value="marco">Março</option>
+                <option value="abril">Abril</option>
+                <option value="maio">Maio</option>
+                <option value="junho">Junho</option>
+                <option value="julho">Julho</option>
+                <option value="agosto">Agosto</option>
+                <option value="setembro">Setembro</option>
+                <option value="outubro">Outubro</option>
+                <option value="novembro">Novembro</option>
+                <option value="dezembro">Dezembro</option>
+            </select>
+
+            <select name="" id="dia">
+                <option value="dia">--Dia--</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+
+            <select name="" id="tipo">
+                <option value="tipo">--Tipo--</option>
+                <option value="alimentacao">Alimentação</option>
+                <option value="educacao">Educação</option>
+                <option value="lazer">Lazer</option>
+                <option value="saude">Saúde</option>
+                <option value="transporte">Transporte</option>
+            </select>
+
+            <input type="text" name="" placeholder="Descrição" id="descricao">
+
+            <input type="text" name="" placeholder="Valor" id="valor">
+
+            <i class="fas fa-plus" id="button"></i>
+        </div>
+    </section>
 
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>

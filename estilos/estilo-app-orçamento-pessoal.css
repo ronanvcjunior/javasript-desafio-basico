@@ -112,10 +112,12 @@ section h1 {
 }
 
 #button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #5071c7;
     grid-area: button;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
 }

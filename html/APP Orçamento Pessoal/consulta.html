@@ -40,11 +40,11 @@
     </header>
 
     <section class="container-fluid container-xl">
-        <h1>Registro de nova despesa</h1>
+        <h1>Consultar despesas</h1>
 
         <div id="registro">
             <select name="" id="ano">
-                <option value="">--Ano--</option>
+                <option value="ano">--Ano--</option>
                 <option value="2018">2018</option>
                 <option value="2019">2019</option>
                 <option value="2020">2020</option>
@@ -52,7 +52,7 @@
             </select>
 
             <select name="" id="mes">
-                <option value="">--Mês--</option>
+                <option value="mes">--Mês--</option>
                 <option value="janeiro">Janeiro</option>
                 <option value="fevereiro">Fevereiro</option>
                 <option value="marco">Março</option>
@@ -68,7 +68,7 @@
             </select>
 
             <select name="" id="dia">
-                <option value="">--Dia--</option>
+                <option value="dia">--Dia--</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
                 <option value="03">03</option>
@@ -103,7 +103,7 @@
             </select>
 
             <select name="" id="tipo">
-                <option value="">--Tipo--</option>
+                <option value="tipo">--Tipo--</option>
                 <option value="alimentacao">Alimentação</option>
                 <option value="educacao">Educação</option>
                 <option value="lazer">Lazer</option>
@@ -115,8 +115,8 @@
 
             <input type="text" name="" placeholder="Valor" id="valor">
 
-            <div id="button" onclick="cadastrarDespesa()">
-                <i class="fas fa-plus"></i>
+            <div id="button">
+                <i class="fas fa-search"></i>
             </div>
         </div>
     </section>

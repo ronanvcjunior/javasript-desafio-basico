@@ -39,7 +39,7 @@ function iniciarJogo() {
 
     mosquito.id = 'mosquito'
 
-    mosquito.onclick = function name() {
+    mosquito.onmousedown = function name() {
         this.remove()
     }
 
